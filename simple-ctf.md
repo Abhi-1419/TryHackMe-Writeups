@@ -72,3 +72,30 @@ ANONYMOUS login worked here
 <img width="1446" height="589" alt="Screenshot 2025-08-01 163705" src="https://github.com/user-attachments/assets/e83ceb75-e325-451b-8ac8-cd1144c0824b" />
 
 
+how did we gain root privilege here?
+
+-after sudo -l we got to know that we can access vim without any password
+so we tried to acces vim by this command
+
+**sudo vim -c ':!/bin/bash'**
+
+
+<img width="761" height="341" alt="Screenshot 2025-08-01 164110" src="https://github.com/user-attachments/assets/78095afb-146c-4da7-895f-c9b5bb2f7e6d" />
+
+
+**Q7:What's the user flag?**
+
+
+**➡️G00d j0b, keep up!**
+
+**Q8:Is there any other user in the home directory? What's its name?**
+
+**➡️sunbath**
+
+**Q9:What can you leverage to spawn a privileged shell?**
+
+**➡️vim**
+
+**Q10:What's the root flag?**
+
+**➡️W3ll d0n3. You made it!**
