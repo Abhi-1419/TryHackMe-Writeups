@@ -23,9 +23,41 @@ So now we can answer our first question
 
 for this lets scan the port number 2222 
 <img width="1069" height="271" alt="Screenshot 2025-08-01 161358" src="https://github.com/user-attachments/assets/27becfb3-7023-4047-b1e9-6ff6fabafada" />
-ANSWER: 
+ANSWER
 **➡️ssh**
 
 ## 2. Identifying Vulnerability
 **Q3:What's the CVE you're using against the application?**
-ANSWER:<img width="1918" height="920" alt="Screenshot 2025-08-01 173614" src="https://github.com/user-attachments/assets/6c8fa1ff-5c8f-4ee5-a302-52b7e8bb5475" />
+ANSWER➡️<img width="1918" height="920" alt="Screenshot 2025-08-01 173614" src="https://github.com/user-attachments/assets/6c8fa1ff-5c8f-4ee5-a302-52b7e8bb5475" />
+
+**Q4:To what kind of vulnerability is the application vulnerable?**
+ANSWER**➡️SQLi**
+
+
+## 3. Connecting to FTP
+
+<img width="826" height="609" alt="Screenshot 2025-08-01 161608" src="https://github.com/user-attachments/assets/61f3ed3c-9630-4efc-87c0-772d2d59f143" />
+
+
+
+<img width="1210" height="150" alt="Screenshot 2025-08-01 161809" src="https://github.com/user-attachments/assets/8d3cebb4-07ed-4a63-b383-1ba312e78302" />
+
+
+
+ANONYMOUS login worked here 
+1) Wegot a pub directory in this
+2) in this directory we found ForMitch.txt which also shows us that our username could be mitch
+3)we copied that file in our attackbox and closed the cnnection with the FTP
+4) we found that the password is weak for the username mitch and with this info we could also try to bruteforce our way into the system
+5) I used rockyou.txt for this
+
+
+
+## 4. Bruteforce
+
+
+<img width="1214" height="402" alt="Screenshot 2025-08-01 163002" src="https://github.com/user-attachments/assets/0ff3fcb5-a9a8-48ed-ba37-272014ecb896" />
+
+**Q5:What's the password?**
+
+**➡️secret**
