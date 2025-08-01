@@ -133,3 +133,5 @@ Hydra – Syntax, logic behind SSH brute-force, and how to narrow the attack sur
 SSH – Managing session access and privilege escalation once logged in.
 
 Linux enumeration basics – Including using sudo -l, inspecting /home, and understanding privilege escalation vectors.
+
+vim – Learned a practical privilege escalation technique using :!/bin/sh.
