@@ -11,6 +11,8 @@ Also I will be attempting all the giving questions in the room.
 
 
  '''🔍 Nmap Scan'''
+``` nmap -p- -T4 -v 10.201.57.18 ```
+
 
  
 <img width="1134" height="646" alt="Screenshot 2025-08-01 161230" src="https://github.com/user-attachments/assets/def16b36-aeac-4fc1-9925-d99ce0d9a9d8" />
@@ -26,6 +28,7 @@ So now we can answer our first question
 **Q2: What is running on the higher port?**
 
 for this lets scan the port number 2222 
+```nmap -sV -p 2222 10.201.57.18```
 <img width="1069" height="271" alt="Screenshot 2025-08-01 161358" src="https://github.com/user-attachments/assets/27becfb3-7023-4047-b1e9-6ff6fabafada" />
 ANSWER
 **➡️ssh**
