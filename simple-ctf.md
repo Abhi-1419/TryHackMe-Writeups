@@ -9,6 +9,10 @@ Also I will be attempting all the giving questions in the room.
 
 ## 🧑‍💻 1. Recon & Enumeration
 
+
+ '''🔍 Nmap Scan'''
+
+ 
 <img width="1134" height="646" alt="Screenshot 2025-08-01 161230" src="https://github.com/user-attachments/assets/def16b36-aeac-4fc1-9925-d99ce0d9a9d8" />
 
 
