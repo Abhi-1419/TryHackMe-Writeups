@@ -105,3 +105,31 @@ so we tried to acces vim by this command
 **Q10:What's the root flag?**
 
 **➡️W3ll d0n3. You made it!**
+
+
+## 🧠 Summary & Reflection
+✅ What I Learned:
+Identifying services running on uncommon ports using full-range Nmap scans.
+
+Using brute-force techniques (hydra + rockyou.txt) efficiently when credentials aren’t obvious.
+
+Leveraging SSH access to pivot from foothold to privilege escalation.
+
+Escalating privileges via misconfigured sudo permissions using vim.
+
+## ⚠️ What Could Have Gone Wrong:
+If I hadn't scanned all ports (-p-), I would've missed the non-standard SSH port.
+
+## 🕳️ Rabbit Holes I Avoided or Escaped:
+Didn't waste time over-enumerating robots.txt or unrelated web directories — focused on paths that actually yielded something.
+
+Avoided custom wordlists or overkill brute-forcing once I realized rockyou.txt worked for both username and password cracking.
+
+## 🛠️ Tools I Got Better At:
+Nmap – Especially using full port scans and combining with service/version detection.
+
+Hydra – Syntax, logic behind SSH brute-force, and how to narrow the attack surface intelligently.
+
+SSH – Managing session access and privilege escalation once logged in.
+
+Linux enumeration basics – Including using sudo -l, inspecting /home, and understanding privilege escalation vectors.
