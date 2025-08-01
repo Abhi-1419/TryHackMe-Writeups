@@ -7,7 +7,7 @@ This was a beginner-level CTF room focused on web enumeration, SSH brute-forcing
 Also I will be attempting all the giving questions in the room.
 
 
-## 🧑‍💻 1. Recon & Enumeration
+## 🛰️ 1. Recon & Enumeration
 
 
  '''🔍 Nmap Scan'''
