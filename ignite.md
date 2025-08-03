@@ -31,5 +31,14 @@ Fuel CMS v1.4 was running on the http server and it is a preety known vulnerabil
 ## 💥 Exploitation
 
 
+Once I confirmed the site was running Fuel CMS, I looked up known vulnerabilities and found a remote code execution (RCE) exploit for Fuel CMS version <= 1.4.1.
 
+```
+searchsploit fuel cms
+```
+<img width="1870" height="294" alt="Screenshot 2025-08-02 234544" src="https://github.com/user-attachments/assets/d9a1bdf3-6966-4714-aa36-d6ff0d4c38c6" />
+
+```
+searchsploit -m linux/webapps/47138.py
+``` 
 
