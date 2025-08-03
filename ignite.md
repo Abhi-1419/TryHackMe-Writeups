@@ -115,6 +115,10 @@ The initial reverse shell was limited — no TTY, no proper terminal control. To
 ```
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
+
+## 🔍 Post-Exploit Enumeration
+
+
 Now lets go through the target machine and Find the flags
 
 
@@ -123,6 +127,52 @@ I found the User.txt flag in /home/www-data
 
 www-data is a low priviledge user system
 
+
+<img width="895" height="644" alt="Screenshot 2025-08-03 004410" src="https://github.com/user-attachments/assets/453c542a-418c-43eb-9b3d-e2e5c6eb25e8" />
+
+
+**6470e394cbf6dab6a91682cc8585059b**
+
+After this I began exploring fuel directory in which I found an application directory which was hiding a config.php and that config.php was containing some privacy stuff like root password etc.
+
+
+<img width="1438" height="830" alt="Screenshot 2025-08-03 005804" src="https://github.com/user-attachments/assets/3a4243aa-bbf4-46a4-bbc1-74625d478960" />
+
+
+
+After finding the password I changed my user to root 
+
+
+```
+su root
+```
+
+**Finally now I am a root user**
+
+Now I have to claim the root flag
+
+
+<img width="508" height="216" alt="Screenshot 2025-08-03 010539" src="https://github.com/user-attachments/assets/bd9cf03d-e23b-4a02-9482-b1568280eb2c" />
+
+
+**b9bbcb33e11b80be759c4e844862482d**
+
+## ❌ Mistakes & What to Avoid
+
+I initially over-relied on walkthroughs for small stuck points. I’ll now try harder to debug before peeking.
+
+Forgot to stabilize my shell early, which made copying files and navigating harder. Always stabilize right after you get in.
+
+## 🧠 What I Learned
+
+Got more fluent with reading exploit code, knowing which parts are optional (like Burp proxy) and which are required (target URL, payload).
+
+This box taught me to look at running services and users post-exploit. Finding the fuel user gave a clear direction for privesc.
+
+## ✅ Conclusion
+
+ I fumbled a bit with the shell handling and missed a few basic enum steps early on,but will keep that in mind for future machines.
+ Overall, it helped me tighten up my process and reminded me not to rush through steps just to get the root flag.
 
 
 
