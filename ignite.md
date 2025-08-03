@@ -42,3 +42,43 @@ searchsploit fuel cms
 searchsploit -m linux/webapps/47138.py
 ``` 
 
+
+<img width="764" height="201" alt="Screenshot 2025-08-02 235133" src="https://github.com/user-attachments/assets/ab3dce31-cb37-42eb-aef6-a94ab1c24f6a" />
+
+here the command ``` -m ``` saved our time by downloading the RCE payload from EXPLOIT-DB(no need to manually copy it from the website)
+
+
+Now lets go through our payload and do some changes
+
+
+<img width="1073" height="776" alt="Screenshot 2025-08-03 000123" src="https://github.com/user-attachments/assets/d192df2f-05a8-4b80-aae9-9220fb701eb5" />
+
+
+1)Here I updated the url to our target ip http://<IP>
+2)Rmoved the proxy payload as I was not using burpsuite for this machine because I didn’t need to intercept the traffic.
+3)To check if the exploit was actually sending requests and getting a valid response, I added:
+
+```
+r = requests.get(burp0_url)
+```
+
+
+Now lets execute the payload 
+
+Just make sure you have a Netcat listener ready before running the reverse shell:
+
+```
+nc -lvnp 4444
+```
+
+```
+python3 47138.py http://<IP>
+
+```
+
+
+Alrigt we got 
+
+
+
+
