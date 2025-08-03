@@ -5,5 +5,5 @@ A collection of CTF walkthroughs from TryHackMe.
 
 ## Index
 
-- [Simple CTF Walkthrough](./simple-ctf.md)
-
+- [Simple CTF Writeup](./simple-ctf.md)
+- [ignite Writeup](./ignite.md)
